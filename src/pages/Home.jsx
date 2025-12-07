@@ -33,7 +33,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40"></div>
                 </div>
 
-                <div className="relative z-10 h-full flex flex-col justify-end md:justify-center pb-24 md:pb-0 pt-32 px-6 md:px-20 text-white max-w-7xl mx-auto text-center md:text-left">
+                <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-20 text-white max-w-7xl mx-auto text-center md:text-left">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

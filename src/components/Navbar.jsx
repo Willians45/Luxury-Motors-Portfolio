@@ -137,7 +137,7 @@ export default function Navbar() {
                             <Link to="/contact" onClick={() => setIsMobileOpen(false)} className="hover:text-brand-gold border-b border-gray-100 dark:border-white/10 pb-4">CONTACT US</Link>
                         </div>
 
-                        <div className="flex items-center gap-4 mt-auto mb-8 cursor-pointer" onClick={() => document.querySelector('button[aria-label="Toggle Theme"]').click()}>
+                        <div className="flex items-center gap-4 mt-auto mb-8">
                             <ThemeToggle />
                             <span className="font-medium">Switch Theme</span>
                         </div>
