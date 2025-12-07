@@ -9,7 +9,7 @@
 
 **Un sitio web de lujo automotriz con visualización 3D, animaciones fluidas y diseño responsive premium.**
 
-[Ver Demo](#) · [Reportar Bug](#) · [Solicitar Feature](#)
+[Ver Demo](https://luxury-motors-portfolio.vercel.app/) · [Reportar Bug](mailto:williansalponce@gmail.com) · [Solicitar Feature](mailto:willianslponce@gmail.com)
 
 </div>
 
