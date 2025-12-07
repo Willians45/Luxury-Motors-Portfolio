@@ -145,15 +145,6 @@ Este proyecto es un portfolio personal y está disponible bajo la licencia MIT.
 
 ## 👨‍💻 Autor
 
-**Tu Nombre**
+**Willians Alcalá**
 
-- Portfolio: [tu-portfolio.com](#)
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
-
----
-
-<div align="center">
-  <p>Hecho con ❤️ y ☕</p>
-  <p>⭐ Si te gustó este proyecto, dale una estrella en GitHub</p>
-</div>
+- LinkedIn: https://www.linkedin.com/in/willians-alc/
