@@ -1,5 +1,6 @@
-# Luxury Motors Portfolio
+# Luxury Motors
 
+<<<<<<< HEAD
 <div align="center">
   
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -12,139 +13,108 @@
 [Ver Demo](https://luxury-motors-portfolio.vercel.app/) · [Reportar Bug](mailto:williansalponce@gmail.com) · [Solicitar Feature](mailto:willianslponce@gmail.com)
 
 </div>
+=======
+**Plantilla de muestra para concesionarios de vehículos de lujo.**  
+Sitio web corporativo con catálogo de vehículos, visualizador 3D, configurador de colores, modo oscuro y formulario de cotización.
+>>>>>>> 9eeb177 (Actualización)
 
 ---
 
-## ✨ Características
+## Stack Tecnológico
 
-- 🚗 **Visualización 3D Interactiva** - Visualizador de vehículos con React Three Fiber
-- 🎨 **Personalización en Tiempo Real** - Cambio de colores de exteriores e interiores
-- 🌓 **Dark Mode** - Toggle entre modo claro y oscuro con persistencia
-- 📱 **Responsive Design** - Optimizado para dispositivos móviles (iPhone 12+)
-- ⚡ **Animaciones Fluidas** - Powered by Framer Motion
-- 🎯 **SEO Optimizado** - Meta tags y estructura semántica
-- 🔍 **Búsqueda de Vehículos** - Filtrado en tiempo real
-- 📋 **Formularios de Cotización** - Sistema de contacto integrado
+| Tecnología         | Versión |
+|--------------------|---------|
+| React              | 19      |
+| Vite               | 7       |
+| Three.js / R3F     | 0.181   |
+| Framer Motion      | 12      |
+| Tailwind CSS       | 3.4     |
+| React Router       | 7       |
+| Lucide React       | 0.556   |
 
-## 🛠️ Tecnologías
-
-- **Frontend Framework:** React 19
-- **Build Tool:** Vite 7
-- **3D Graphics:** Three.js + React Three Fiber + Drei
-- **Animations:** Framer Motion
-- **Styling:** Tailwind CSS
-- **Routing:** React Router v7
-- **Icons:** Lucide React
-
-## 🚀 Inicio Rápido
-
-### Prerrequisitos
-
-- Node.js 18+ 
-- npm o yarn
-
-### Instalación
-
-```bash
-# Clonar el repositorio
-git clone https://github.com/TU_USUARIO/luxury-motors.git
-
-# Navegar al directorio
-cd luxury-motors
-
-# Instalar dependencias
-npm install
-
-# Iniciar servidor de desarrollo
-npm run dev
-```
-
-El sitio estará disponible en `http://localhost:5173`
-
-## 📦 Scripts Disponibles
-
-```bash
-npm run dev      # Servidor de desarrollo
-npm run build    # Build de producción
-npm run preview  # Preview del build
-npm run lint     # Linter de código
-```
-
-## 🌐 Deployment
-
-Este proyecto está listo para ser desplegado en Vercel. Ver [DEPLOY.md](./DEPLOY.md) para instrucciones detalladas.
-
-### Deploy Rápido
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/TU_USUARIO/luxury-motors)
-
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 luxury-motors/
-├── public/
-│   └── assets/         # Imágenes y recursos estáticos
 ├── src/
-│   ├── components/     # Componentes reutilizables
-│   │   ├── CarViewer.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Navbar.jsx
-│   │   └── ThemeToggle.jsx
-│   ├── data/          # Data y configuración
-│   │   └── cars.js
-│   ├── pages/         # Páginas principales
-│   │   ├── Home.jsx
-│   │   ├── Vehicles.jsx
-│   │   ├── VehicleDetail.jsx
-│   │   └── Contact.jsx
-│   ├── App.jsx        # Componente principal
-│   └── main.jsx       # Entry point
-├── DEPLOY.md          # Guía de deployment
-└── package.json
+│   ├── components/        # Componentes reutilizables
+│   │   ├── CarViewer.jsx      Visualizador 3D del vehículo
+│   │   ├── Navbar.jsx         Barra de navegación responsive con búsqueda
+│   │   ├── Footer.jsx         Footer de 4 columnas con redes sociales
+│   │   ├── FeaturedSlider.jsx Slider horizontal de modelos destacados
+│   │   └── ThemeToggle.jsx    Alternador de modo claro/oscuro
+│   ├── pages/             # Páginas principales
+│   │   ├── Home.jsx           Página de inicio con hero, grid, secciones informativas
+│   │   ├── Vehicles.jsx       Catálogo con filtros por categoría
+│   │   ├── VehicleDetail.jsx  Página detalle con configurador 3D, especificaciones, cotización
+│   │   └── Contact.jsx        Página de contacto con formulario, FAQ y empleos
+│   ├── data/
+│   │   └── cars.js            Datos de vehículos de muestra (Lexus NX, LX, GX)
+│   ├── App.jsx                Componente principal con routing y layout
+│   ├── main.jsx               Entry point
+│   └── index.css              Estilos Tailwind + scrollbar personalizado
+├── public/
+│   ├── assets/
+│   │   ├── cars/              Imágenes de vehículos (nx.webp, lx.webp, gx.webp)
+│   │   └── mastery-bg.jpg     Imagen de fondo sección "Mastery in Motion"
+│   └── models/
+│       └── tesla_2018_model_3.glb  Modelo 3D para el visualizador
+├── dist/                  # Build de producción
+├── index.html             # HTML principal con fuentes de Google
+├── tailwind.config.js     # Configuración de colores, fuentes, dark mode
+├── vite.config.js         # Configuración de Vite
+├── eslint.config.js       # Configuración de ESLint
+├── postcss.config.js      # Configuración de PostCSS
+├── DEPLOY.md              # Guía de deploy en Vercel
+└── package.json           # Dependencias y scripts
 ```
 
-## 🎨 Personalización
+## Funcionalidades
 
-### Colores
+- **Catálogo de vehículos** con filtrado por categorías
+- **Visualizador 3D interactivo** (exterior e interior) con cambio de color en tiempo real
+- **Modo oscuro/claro** con persistencia en localStorage
+- **Búsqueda dinámica** de modelos en la barra de navegación
+- **Slider de modelos destacados** con scroll horizontal
+- **Configurador de accesorios** con cálculo de precio total
+- **Formulario de cotización** por vehículo
+- **Página de contacto** con mapa, FAQ interactivo y sección de empleos
+- **Animaciones** con Framer Motion (transiciones, scroll reveals, hover effects)
+- **Diseño responsive** (mobile-first, iPhone 12+)
+- **Scroll suave** al cambiar de ruta
 
-Los colores se configuran en `tailwind.config.js`:
+## Scripts
 
-```js
-colors: {
-  'brand-black': '#0a0a0a',
-  'brand-gold': '#d4af37',
-  'brand-light': '#f5f5f5',
-  'brand-gray': '#1a1a1a',
-}
+```bash
+npm run dev       # Desarrollo (http://localhost:5173)
+npm run build     # Build producción
+npm run preview   # Preview del build
+npm run lint      # Linter
 ```
+
+## Personalización
 
 ### Vehículos
+Editar `src/data/cars.js` para agregar, modificar o eliminar vehículos del catálogo.
 
-Edita `src/data/cars.js` para agregar o modificar vehículos.
+### Colores y tema
+Editar `tailwind.config.js` en la sección `colors.brand` para cambiar la paleta de la marca.
 
-## 📱 Responsive Design
+### Modelo 3D
+Reemplazar `public/models/tesla_2018_model_3.glb` por el modelo GLB del vehículo deseado.
 
-- **Mobile:** 390px+ (iPhone 12, 13, 14)
-- **Tablet:** 768px+
-- **Desktop:** 1024px+
-- **Large Desktop:** 1280px+
+### Imágenes
+Reemplazar las imágenes en `public/assets/cars/` y `public/assets/` con las del concesionario.
 
-## 🤝 Contribuir
+## Despliegue
 
-Las contribuciones son bienvenidas. Para cambios importantes:
+```bash
+npm run build
+```
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+El directorio `dist/` está listo para subir a Vercel, Netlify o cualquier hosting estático.  
+Ver [DEPLOY.md](./DEPLOY.md) para instrucciones detalladas de deploy en Vercel.
 
-## 📄 Licencia
+---
 
-Este proyecto es un portfolio personal y está disponible bajo la licencia MIT.
-
-## 👨‍💻 Autor
-
-**Willians Alcalá**
-
-- LinkedIn: https://www.linkedin.com/in/willians-alc/
+*Plantilla creada por Willians Alcala como muestra para concesionarios de lujo.*

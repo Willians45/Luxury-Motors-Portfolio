@@ -26,7 +26,6 @@
   z-index: 0;
 }
 
-/* Custom scrollbar for better aesthetic */
 ::-webkit-scrollbar {
   width: 8px;
 }

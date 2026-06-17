@@ -20,7 +20,6 @@ export default function FeaturedSlider() {
             <div className="flex justify-between items-center mb-8 px-6 md:px-20 max-w-7xl mx-auto">
                 <h2 className="text-3xl md:text-5xl font-serif text-brand-black dark:text-white">Meet the models</h2>
                 <div className="hidden md:flex gap-4">
-                    {/* Filters could go here similar to image 1, keeping simple for now */}
                 </div>
             </div>
 
@@ -45,7 +44,6 @@ export default function FeaturedSlider() {
                     {CARS.map((car) => (
                         <div key={car.id} className="min-w-[300px] md:min-w-[400px] snap-center flex-shrink-0">
                             <Link to={`/vehicles/${car.id}`} className="block group/card text-center">
-                                {/* Car Image - Ideally transparent PNG, using object-cover for placeholder */}
                                 <div className="relative aspect-[16/9] mb-6 transition-transform duration-500 group-hover/card:scale-105">
                                     <img
                                         src={car.image}
@@ -59,7 +57,6 @@ export default function FeaturedSlider() {
                             </Link>
                         </div>
                     ))}
-                    {/* Duplicate logic for 'infinite' feel not implemented, relying on scroll */}
                     {CARS.map((car) => (
                         <div key={`${car.id}-dup`} className="min-w-[300px] md:min-w-[400px] snap-center flex-shrink-0">
                             <Link to={`/vehicles/${car.id}`} className="block group/card text-center">

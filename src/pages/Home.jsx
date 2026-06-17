@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, ShieldCheck, Zap } from 'lucide-react';
 import { CARS } from '../data/cars';
 
-/* Helper for sections */
 const InfoSection = ({ title, text, linkText, image, reverse }) => (
     <section className={`py-12 md:py-20 px-6 md:px-20 max-w-7xl mx-auto flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-6 md:gap-12 border-b border-gray-100 dark:border-white/5`}>
         <div className="w-full md:flex-1 overflow-hidden rounded-sm shadow-xl aspect-[4/3] md:aspect-[3/2] group relative">
@@ -24,7 +23,6 @@ const InfoSection = ({ title, text, linkText, image, reverse }) => (
 export default function Home() {
     return (
         <div className="w-full bg-brand-light dark:bg-brand-black transition-colors duration-500">
-            {/* Hero Section */}
             <section className="relative h-screen w-full overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
@@ -66,7 +64,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Featured Vehicles (Reverted to Grid) */}
             <section className="py-24 bg-white dark:bg-brand-gray transition-colors duration-500 border-b border-gray-100 dark:border-white/5">
                 <div className="max-w-7xl mx-auto px-6 md:px-20">
                     <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 md:mb-16 text-center md:text-left gap-6">
@@ -112,7 +109,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Info Sections */}
             <InfoSection
                 title="Lexus Safety System+ 3.0"
                 text="Peace of mind comes standard. Our most comprehensive safety system ever includes Pre-Collision System with Pedestrian Detection, Lane Tracing Assist, and more, working together to help protect you and your passengers."
@@ -128,7 +124,6 @@ export default function Home() {
                 reverse={true}
             />
 
-            {/* Mastery in Motion Update */}
             <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0">
                     <img

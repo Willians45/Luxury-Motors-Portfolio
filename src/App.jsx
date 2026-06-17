@@ -8,7 +8,6 @@ import VehicleDetail from './pages/VehicleDetail';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 
-// Wrapper to handle scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
   React.useEffect(() => {

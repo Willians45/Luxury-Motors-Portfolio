@@ -20,7 +20,6 @@ export default function VehicleDetail() {
     const [activeTab, setActiveTab] = useState('specs');
     const [selectedAccessories, setSelectedAccessories] = useState([]);
 
-    // Calculate Total Price
     const basePrice = parseInt(car.price.replace(/[^0-9]/g, '')) || 50000;
     const accessoriesTotal = selectedAccessories.reduce((sum, accId) => {
         const acc = ACCESSORIES.find(a => a.id === accId);
@@ -28,7 +27,6 @@ export default function VehicleDetail() {
     }, 0);
     const totalPrice = basePrice + accessoriesTotal;
 
-    // Toggle Accessory
     const toggleAccessory = (accId) => {
         setSelectedAccessories(prev =>
             prev.includes(accId) ? prev.filter(id => id !== accId) : [...prev, accId]
@@ -48,9 +46,7 @@ export default function VehicleDetail() {
     return (
         <div className="min-h-screen bg-brand-light dark:bg-brand-black text-brand-black dark:text-white pt-20 transition-colors duration-300">
 
-            {/* 3D Configurator Section */}
             <section className="h-[85vh] w-full relative grid grid-cols-1 lg:grid-cols-12 border-b border-gray-200 dark:border-white/10">
-                {/* Controls Sidebar (Left) - Desktop */}
                 <div className="hidden lg:flex lg:col-span-3 flex-col justify-between p-8 border-r border-gray-200 dark:border-white/10 bg-white/80 dark:bg-brand-black/50 backdrop-blur-sm z-10 transition-colors">
                     <div>
                         <Link to="/vehicles" className="inline-flex items-center gap-2 text-gray-500 hover:text-brand-gold transition-colors mb-8">
@@ -67,7 +63,6 @@ export default function VehicleDetail() {
                             {accessoriesTotal > 0 && <p className="text-xs text-gray-500">+${accessoriesTotal.toLocaleString()} accessories</p>}
                         </motion.div>
 
-                        {/* View Toggle */}
                         <div className="flex gap-4 mb-8">
                             <button
                                 onClick={() => setViewMode('exterior')}
@@ -114,16 +109,13 @@ export default function VehicleDetail() {
                     </div>
                 </div>
 
-                {/* 3D Viewer Area */}
                 <div className="lg:col-span-9 relative h-[60vh] lg:h-full bg-gray-100 dark:bg-gray-900 transition-colors">
-                    {/* Mobile Back Button */}
                     <Link to="/vehicles" className="lg:hidden absolute top-4 left-4 z-10 p-2 bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-full text-brand-black dark:text-white border border-white/10 shadow-sm">
                         <ArrowLeft size={20} />
                     </Link>
 
                     <CarViewer color={selectedColor.hex} viewMode={viewMode} />
 
-                    {/* Mobile Controls Overlay */}
                     <div className="lg:hidden absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white dark:from-black via-white/80 dark:via-black/80 to-transparent">
                         <div className="flex justify-between items-end mb-4">
                             <div>
@@ -157,7 +149,6 @@ export default function VehicleDetail() {
                 </div>
             </section>
 
-            {/* Spotlight Section (Updated Image) */}
             <section className="py-24 bg-white dark:bg-brand-gray transition-colors border-b border-gray-100 dark:border-white/5">
                 <div className="max-w-7xl mx-auto px-6 md:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -178,7 +169,6 @@ export default function VehicleDetail() {
                             </div>
                         </div>
                         <div className="order-1 lg:order-2 h-[400px] lg:h-[500px] relative overflow-hidden rounded-sm shadow-2xl group">
-                            {/* Replaced with a generic luxury interior/detail shot */}
                             <img
                                 src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=2574&auto=format&fit=crop"
                                 alt="Detail"
@@ -190,7 +180,6 @@ export default function VehicleDetail() {
                 </div>
             </section>
 
-            {/* Details & Specs */}
             <section className="bg-brand-light dark:bg-brand-black text-brand-black dark:text-white transition-colors">
                 <div className="max-w-7xl mx-auto px-6 md:px-20 py-16 md:py-24">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start">
@@ -279,7 +268,6 @@ export default function VehicleDetail() {
                             </div>
                         </div>
 
-                        {/* Resources Column */}
                         <div className="space-y-6 md:space-y-8">
                             <div className="p-6 md:p-8 bg-white dark:bg-brand-gray rounded-sm shadow-sm md:mt-12">
                                 <h3 className="text-lg md:text-xl font-sans mb-4 md:mb-6 flex items-center gap-2"> <BookOpen size={20} className="text-brand-gold" /> Resources & Manuals</h3>
@@ -317,7 +305,6 @@ export default function VehicleDetail() {
                 </div>
             </section>
 
-            {/* Quote Form */}
             <section ref={quoteRef} id="quote" className="py-24 bg-brand-gray text-white px-6 md:px-20">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">

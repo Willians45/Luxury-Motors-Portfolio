@@ -45,7 +45,6 @@ const AccordionItem = ({ question, answer }) => {
 export default function Contact() {
     return (
         <div className="min-h-screen bg-brand-light dark:bg-brand-black text-brand-black dark:text-white transition-colors duration-300">
-            {/* Header */}
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -57,7 +56,6 @@ export default function Contact() {
             </motion.div>
 
             <div className="max-w-7xl mx-auto px-6 md:px-20 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
-                {/* Contact Info & Map */}
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -89,7 +87,6 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    {/* Placeholder Map */}
                     <div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-sm relative overflow-hidden group">
                         <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2674&auto=format&fit=crop" alt="Map" className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" />
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -98,7 +95,6 @@ export default function Contact() {
                     </div>
                 </motion.div>
 
-                {/* Contact Form */}
                 <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -143,7 +139,6 @@ export default function Contact() {
 
             <div className="bg-gray-50 dark:bg-black/20 py-20 px-6">
                 <div className="max-w-4xl mx-auto">
-                    {/* FAQ & Careers */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

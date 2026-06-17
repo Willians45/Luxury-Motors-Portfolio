@@ -22,7 +22,6 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Filter cars based on search
     useEffect(() => {
         if (searchQuery.trim() === '') {
             setSearchResults([]);
@@ -52,7 +51,6 @@ export default function Navbar() {
                         Luxury Motors
                     </Link>
 
-                    {/* Desktop Nav */}
                     <div className="hidden md:flex h-full items-center gap-8 text-sm tracking-wide font-medium">
                         <Link to="/vehicles" className={`transition-colors py-4 border-b-2 border-transparent hover:border-brand-gold ${textColorClass}`}>VEHICLES</Link>
                         <Link to="#" className={`transition-colors py-4 border-b-2 border-transparent hover:border-brand-gold ${textColorClass}`}>MY LUXUS</Link>
@@ -61,7 +59,6 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-6">
-                    {/* Desktop Utilities */}
                     <div className="hidden md:flex items-center gap-4 text-sm font-medium">
                         <div className={`relative flex items-center transition-all duration-300 ${isSearchOpen ? 'w-64' : 'w-8'}`}>
                             <button
@@ -78,7 +75,6 @@ export default function Navbar() {
                                 className={`pl-8 pr-4 py-1 bg-transparent border-b border-gray-300 dark:border-gray-600 focus:border-brand-gold outline-none text-sm w-full transition-all duration-300 ${isSearchOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                             />
 
-                            {/* Search Dropdown */}
                             <AnimatePresence>
                                 {isSearchOpen && searchResults.length > 0 && (
                                     <motion.div
@@ -122,7 +118,6 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            {/* Mobile Menu */}
             <AnimatePresence>
                 {isMobileOpen && (
                     <motion.div

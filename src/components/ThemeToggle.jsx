@@ -3,7 +3,6 @@ import { Sun, Moon } from 'lucide-react';
 
 export default function ThemeToggle() {
     const [isDark, setIsDark] = useState(() => {
-        // Initialize from localStorage or default to false
         const saved = localStorage.getItem('theme');
         return saved === 'dark';
     });
@@ -17,12 +16,10 @@ export default function ThemeToggle() {
             localStorage.setItem('theme', 'light');
         }
 
-        // Dispatch custom event to sync all ThemeToggle instances
         window.dispatchEvent(new CustomEvent('themeChange', { detail: { isDark } }));
     }, [isDark]);
 
     useEffect(() => {
-        // Listen for theme changes from other ThemeToggle instances
         const handleThemeChange = (e) => {
             setIsDark(e.detail.isDark);
         };
