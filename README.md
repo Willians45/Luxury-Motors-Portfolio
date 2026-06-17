@@ -1,6 +1,6 @@
 # Luxury Motors
 
-<<<<<<< HEAD
+
 <div align="center">
   
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -13,10 +13,10 @@
 [Ver Demo](https://luxury-motors-portfolio.vercel.app/) · [Reportar Bug](mailto:williansalponce@gmail.com) · [Solicitar Feature](mailto:willianslponce@gmail.com)
 
 </div>
-=======
+
 **Plantilla de muestra para concesionarios de vehículos de lujo.**  
 Sitio web corporativo con catálogo de vehículos, visualizador 3D, configurador de colores, modo oscuro y formulario de cotización.
->>>>>>> 9eeb177 (Actualización)
+
 
 ---
 
